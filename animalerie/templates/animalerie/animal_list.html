@@ -1,0 +1,25 @@
+{% extends 'animalerie/base.html' %}
+
+{% load static %}
+{% block content %}
+<h1>Animaux</h1>
+<div id="content1">
+    {% for animal in animals %}
+        <div id="tableau">
+        <div class="animal" id="animal">
+            <div class="photo">
+                <img src={{animal.photo}} width="150" height="150">
+            </div>
+        <p id="nom"><a href="{% url 'animal_detail' id_animal=animal.id_animal %}" id="nomanimaux">{{ animal.id_animal}}</a></p>
+        
+        <p> Race : {{ animal.race }} </p>
+        <p> Type : {{ animal.type }} </p>
+        <p> Etat : {{ animal.etat }} </p>
+        <p> Lieu : {{ animal.lieu }} </p>
+        </div>
+        </div>
+    {% endfor %}
+</div>
+
+        
+{% endblock %}

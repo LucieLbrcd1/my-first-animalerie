@@ -1,0 +1,23 @@
+{% load static %}
+<html>
+    <head>
+        <title>Mon animalerie</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/animalerie.css' %}">
+    </head>
+    <body background="https://img.freepik.com/photos-gratuite/mur-beton-gris_53876-88973.jpg?w=2000">
+        <div class="page-header">
+            <h1><a href="/">Mon animalerie</a></h1>
+        </div>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                        {% block content %}
+                        {% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
